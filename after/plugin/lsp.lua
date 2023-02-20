@@ -21,5 +21,20 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 
 })
 
+require'lspconfig'.ccls.setup{}
+
+local lspconfig = require'lspconfig'
+lspconfig.ccls.setup {
+  init_options = {
+    compilationDatabaseDirectory = "build";
+    index = {
+      threads = 0;
+    };
+    clang = {
+      excludeArgs = { "-frounding-math"} ;
+    };
+  }
+}
+
 
 lsp.setup()
