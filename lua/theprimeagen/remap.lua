@@ -4,3 +4,4 @@ vim.keymap.set("i", "<A-p>", vim.cmd.EslintFixAll)
 
 vim.keymap.set("n", "<leader>fp", vim.cmd.EslintFixAll)
 
+vim.keymap.set("n", "<leader>tt", vim.cmd.ToggleTerm)
